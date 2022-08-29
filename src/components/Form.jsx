@@ -3,41 +3,88 @@ import React from 'react';
 class Form extends React.Component {
   render() {
     return (
-      <form>
+      <div>
         <label htmlFor="name">
-          <input type="text" id="name" data-testid="name-input" />
+          Nome
+          <input
+            name="name"
+            type="text"
+            data-testid="name-input"
+            id="name"
+          />
         </label>
-        <br />
-        <textarea cols="30" rows="10" data-testid="description-input" />
-        <br />
+        <label htmlFor="description">
+          Descrição
+          <input
+            name="description"
+            type="text"
+            data-testid="description-input"
+            id="description"
+          />
+        </label>
         <label htmlFor="attr1">
-          <input type="number" id="attr1" data-testid="attr1-input" />
+          Físico
+          <input
+            name="attr1"
+            type="number"
+            data-testid="attr1-input"
+            id="attr1"
+          />
         </label>
-        <br />
         <label htmlFor="attr2">
-          <input type="number" id="attr2" data-testid="attr2-input" />
+          Mágico
+          <input
+            name="attr2"
+            type="number"
+            data-testid="attr2-input"
+            id="attr2"
+          />
         </label>
-        <br />
         <label htmlFor="attr3">
-          <input type="number" id="attr3" data-testid="attr3-input" />
+          Velocidade
+          <input
+            name="attr3"
+            type="number"
+            data-testid="attr3-input"
+            id="attr3"
+          />
         </label>
-        <br />
-        <label htmlFor="input-image">
-          <input type="text" id="input-image" data-testid="image-input" />
+        <label htmlFor="image">
+          Imagem
+          <input
+            name="image"
+            type="text"
+            data-testid="image-input"
+            id="image"
+          />
         </label>
-        <br />
-        <select name="" id="">
-          <option value="normal">normal</option>
-          <option value="raro">raro</option>
-          <option value="muito raro">muito raro</option>
-        </select>
-        <br />
-        <label htmlFor="trunfo-input">
-          <input type="checkbox" id="trunfo-input" data-testid="trunfo-input" />
+        <label htmlFor="raridade">
+          <select
+            name="rarity"
+            data-testid="rare-input"
+            id="raridade"
+          >
+            <option>normal</option>
+            <option>raro</option>
+            <option>muito raro</option>
+          </select>
         </label>
-        <br />
-        <button type="button" data-testid="save-button">Salvar</button>
-      </form>
+        <label htmlFor="Trunfo">
+          <input
+            name="Trunfo"
+            type="checkbox"
+            data-testid="trunfo-input"
+            id="Trunfo"
+          />
+        </label>
+        <button
+          type="button"
+          data-testid="save-button"
+          id="save"
+        >
+          Salvar
+        </button>
+      </div>
     );
   }
 }
