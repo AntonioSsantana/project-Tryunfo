@@ -6,18 +6,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Tryunfo</h1>
-        <Form
-          cardName=""
-          cardDescription=""
-          cardAttr1=""
-          cardAttr2=""
-          cardAttr3=""
-          cardImage=""
-          cardRare=""
-          cardTrunfo
-          hasTrunfo
-          onInputChange={ () => {} }
-        />
+        <Form />
       </div>
     );
   }
