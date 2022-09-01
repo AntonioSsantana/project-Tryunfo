@@ -76,11 +76,11 @@ class Form extends React.Component {
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="raridade">
+        <label htmlFor="rarity">
           <select
             name="rarity"
             data-testid="rare-input"
-            id="raridade"
+            id="rarity"
             value={ cardRare }
             onChange={ onInputChange }
           >
