@@ -9,13 +9,21 @@ class Card extends React.Component {
     } = this.props;
 
     return (
-      <div>
-        <h3 data-testid="name-card">{cardName}</h3>
-        <img src={ cardImage } alt={ cardName } width="145px" data-testid="image-card" />
-        <section className="description-card">
-          <span data-testid="description-card">{cardDescription}</span>
+      <div className="card-char">
+        <h3 id="nameCard" data-testid="name-card">{cardName}</h3>
+        <img
+          src={ cardImage }
+          alt={ cardName }
+          width="145px"
+          id="cardImg"
+          data-testid="image-card"
+        />
+        <section>
+          <span id="description-card" data-testid="description-card">
+            {cardDescription}
+          </span>
         </section>
-        <section className="attr-card">
+        <section id="attr-card">
           <ul data-testid="attr1-card">
             Físico:
             {cardAttr1}
@@ -29,10 +37,16 @@ class Card extends React.Component {
             {cardAttr3}
           </ul>
         </section>
-        <h4 data-testid="rare-card">{cardRare}</h4>
-        {
-          cardTrunfo ? <h5 data-testid="trunfo-card">Super Trunfo</h5> : null
-        }
+        <section>
+          <ul>
+            <h4 data-testid="rare-card">{cardRare}</h4>
+          </ul>
+          <ul>
+            {
+              cardTrunfo ? <h5 data-testid="trunfo-card">Super Trunfo</h5> : null
+            }
+          </ul>
+        </section>
       </div>
     );
   }

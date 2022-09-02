@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Estilização do formulário */
+.form-card {
+ display: inline-flex;
+ flex-direction: column;
+}
+
+ /* Estilização do card */
+
+.card-char {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: rgba(130, 90, 224, 0.2);
+  border-style: ridge;
+  margin-left: 20%;
+} 
+
+#nameCard {
+  margin: 50px;
+}
+
+#cardImg {
+  margin-left: 20%;
+}
+
+#description-card {
+  margin-left: 10%;
+}
+
+

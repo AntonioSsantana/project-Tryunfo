@@ -11,7 +11,7 @@ class App extends React.Component {
     attr3: '',
     image: '',
     rarity: '',
-    isTrunfo: true,
+    isTrunfo: false,
   };
 
   onInputChange = (event) => {

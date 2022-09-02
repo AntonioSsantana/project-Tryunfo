@@ -10,7 +10,7 @@ class Form extends React.Component {
       onSaveButtonClick } = this.props;
 
     return (
-      <main>
+      <main className="form-card">
         <label htmlFor="name">
           Nome
           <input
@@ -25,8 +25,9 @@ class Form extends React.Component {
           Descrição
           <textarea
             name="description"
-            cols="30"
-            rows="10"
+            cols="20"
+            rows="0"
+            maxLength={ 28 }
             data-testid="description-input"
             value={ cardDescription }
             onChange={ onInputChange }
