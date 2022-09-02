@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
 
 class Form extends React.Component {
   render() {
-
     return (
       <main>
         <label htmlFor="name">
@@ -66,21 +65,15 @@ class Form extends React.Component {
         </label>
         <label htmlFor="isTrunfo">
           IsTrunfo?
-          <input 
-          type="checkbox" 
-          name="isTrunfo"  
-          data-testid="trunfo-input"
+          <input
+            type="checkbox"
+            name="isTrunfo"
+            data-testid="trunfo-input"
           />
         </label>
-        <label htmlFor="save">
-          <button 
-          name="save"
-          type="submit" 
-          data-testid="save-button"
-          />
-        </label>
+        <button type="submit" name="save" data-testid="save-button">Salvar</button>
       </main>
-    )
+    );
   }
 }
 
