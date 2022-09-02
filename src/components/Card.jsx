@@ -11,14 +11,23 @@ class Card extends React.Component {
     return (
       <div>
         <h3 data-testid="name-card">{cardName}</h3>
-        <img src={ cardImage } alt={ cardName } data-testid="image-card" />
+        <img src={ cardImage } alt={ cardName } width="145px" data-testid="image-card" />
         <section className="description-card">
           <span data-testid="description-card">{cardDescription}</span>
         </section>
         <section className="attr-card">
-          <ul data-testid="attr1-card">{cardAttr1}</ul>
-          <ul data-testid="attr2-card">{cardAttr2}</ul>
-          <ul data-testid="attr3-card">{cardAttr3}</ul>
+          <ul data-testid="attr1-card">
+            Físico:
+            {cardAttr1}
+          </ul>
+          <ul data-testid="attr2-card">
+            Mágico:
+            {cardAttr2}
+          </ul>
+          <ul data-testid="attr3-card">
+            Velocidade:
+            {cardAttr3}
+          </ul>
         </section>
         <h4 data-testid="rare-card">{cardRare}</h4>
         {
