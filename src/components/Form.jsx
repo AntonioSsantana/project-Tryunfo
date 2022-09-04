@@ -36,6 +36,7 @@ class Form extends React.Component {
         <label htmlFor="attr1">
           Físico
           <input
+            type="number"
             name="attr1"
             data-testid="attr1-input"
             value={ cardAttr1 }
@@ -45,6 +46,7 @@ class Form extends React.Component {
         <label htmlFor="attr2">
           Mágico
           <input
+            type="number"
             name="attr2"
             data-testid="attr2-input"
             value={ cardAttr2 }
@@ -54,6 +56,7 @@ class Form extends React.Component {
         <label htmlFor="attr3">
           Velocidade
           <input
+            type="number"
             name="attr3"
             data-testid="attr3-input"
             value={ cardAttr3 }
