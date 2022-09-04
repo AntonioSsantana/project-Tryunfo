@@ -24,15 +24,15 @@ class Card extends React.Component {
           </span>
         </section>
         <section id="attr-card">
-          <ul data-testid="attr1-card">
+          <ul data-testid="attr1-card" type="number">
             Físico:
             {cardAttr1}
           </ul>
-          <ul data-testid="attr2-card">
+          <ul data-testid="attr2-card" type="number">
             Mágico:
             {cardAttr2}
           </ul>
-          <ul data-testid="attr3-card">
+          <ul data-testid="attr3-card" type="number">
             Velocidade:
             {cardAttr3}
           </ul>

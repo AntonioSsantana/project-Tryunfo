@@ -10,29 +10,60 @@ class App extends React.Component {
     attr2: '',
     attr3: '',
     image: '',
-    rarity: '',
+    rarity: 'normal',
     isTrunfo: false,
+    hasTrunfo: false,
+    isSaveButtonDisabled: true,
+  };
+
+  isDisableButton = () => {
+    const { name, description, attr1, attr2, attr3,
+      image } = this.state;
+
+    const sumAttr = parseInt(attr1) + parseInt(attr2) + parseInt(attr3);
+    const maxAttr = 90;
+    const minAttr = 0;
+    const maxSum = 210;
+
+    if (name === '' || description === '' || image === ''/* ||
+      attr1 > maxAttr || attr1 < minAttr ||
+      attr2 > maxAttr || attr2 < minAttr ||
+      attr3 > maxAttr || attr3 < minAttr ||
+      sumAttr > maxSum */) {
+      this.setState({
+        isSaveButtonDisabled: true,
+      });
+    } else {
+      this.setState({
+        isSaveButtonDisabled: false,
+      });
+    }
   };
 
   onInputChange = (event) => {
     const { target } = event;
     const value = target.type === 'checkbox' ? target.checked : target.value;
-    this.setState(
-      {
-        [event.target.name]: value,
-      },
-    );
-    console.log(value);
+    this.setState({ [event.target.name]: value }, () => this.isDisableButton());
   };
 
   render() {
     const { name, description, image,
-      attr1, attr2, attr3, rarity, isTrunfo } = this.state;
+      attr1, attr2, attr3, rarity, isTrunfo, isSaveButtonDisabled, hasTrunfo } = this.state;
 
     return (
       <div>
         <h1>Tryunfo</h1>
         <Form
+          cardName={ name }
+          cardDescription={ description }
+          cardAttr1={ image }
+          cardAttr2={ attr1 }
+          cardAttr3={ attr2 }
+          cardImage={ attr3 }
+          cardRare={ rarity }
+          cardTrunfo={ isTrunfo }
+          hasTrunfo={ hasTrunfo }
+          isSaveButtonDisabled={ isSaveButtonDisabled }
           onInputChange={ this.onInputChange }
         />
         <Card

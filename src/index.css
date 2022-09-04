@@ -13,12 +13,13 @@ code {
 }
 
 /* Estilização do formulário */
+
 .form-card {
  display: inline-flex;
  flex-direction: column;
 }
 
- /* Estilização do card */
+/* Estilização do card */
 
 .card-char {
   display: inline-flex;
