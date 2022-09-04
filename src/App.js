@@ -6,9 +6,9 @@ class App extends React.Component {
   state = {
     name: '',
     description: '',
-    attr1: '',
-    attr2: '',
-    attr3: '',
+    attr1: '0',
+    attr2: '0',
+    attr3: '0',
     image: '',
     rarity: 'normal',
     isTrunfo: false,
@@ -46,6 +46,24 @@ class App extends React.Component {
     this.setState({ [event.target.name]: value }, () => this.isDisableButton());
   };
 
+  handleSaveCardButton = () => {
+    const deckSaved = [];
+    deckSaved.push(this.state);
+    console.log(deckSaved)
+    this.setState({
+      name: '',
+      description: '',
+      image: '',
+      attr1: 0,
+      attr2: 0,
+      attr3: 0,
+      rarity: 'normal',
+      isTrunfo: false,
+      hasTrunfo: false,
+      isSaveButtonDisabled: true,
+    });
+  };
+
   render() {
     const { name, description, image,
       attr1, attr2, attr3, rarity, isTrunfo,
@@ -55,27 +73,28 @@ class App extends React.Component {
       <div>
         <h1>Tryunfo</h1>
         <Form
-          cardName={ name }
-          cardDescription={ description }
-          cardAttr1={ attr1 }
-          cardAttr2={ attr2 }
-          cardAttr3={ attr3 }
-          cardImage={ image }
-          cardRare={ rarity }
-          cardTrunfo={ isTrunfo }
-          hasTrunfo={ hasTrunfo }
-          isSaveButtonDisabled={ isSaveButtonDisabled }
-          onInputChange={ this.onInputChange }
+          cardName={name}
+          cardDescription={description}
+          cardAttr1={attr1}
+          cardAttr2={attr2}
+          cardAttr3={attr3}
+          cardImage={image}
+          cardRare={rarity}
+          cardTrunfo={isTrunfo}
+          hasTrunfo={hasTrunfo}
+          isSaveButtonDisabled={isSaveButtonDisabled}
+          onSaveButtonClick={this.handleSaveCardButton}
+          onInputChange={this.onInputChange}
         />
         <Card
-          cardName={ name }
-          cardDescription={ description }
-          cardImage={ image }
-          cardAttr1={ attr1 }
-          cardAttr2={ attr2 }
-          cardAttr3={ attr3 }
-          cardRare={ rarity }
-          cardTrunfo={ isTrunfo }
+          cardName={name}
+          cardDescription={description}
+          cardImage={image}
+          cardAttr1={attr1}
+          cardAttr2={attr2}
+          cardAttr3={attr3}
+          cardRare={rarity}
+          cardTrunfo={isTrunfo}
         />
       </div>
     );
