@@ -27,7 +27,6 @@ class Form extends React.Component {
             name="description"
             cols="20"
             rows="0"
-            maxLength={ 28 }
             data-testid="description-input"
             value={ cardDescription }
             onChange={ onInputChange }
